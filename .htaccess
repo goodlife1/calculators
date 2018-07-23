@@ -1,0 +1,12 @@
+Header set X-Content-Type-Options "nosniff"
+Header always set Access-Control-Max-Age 1728000
+Header always set Access-Control-Allow-Origin: "*"
+Header always set Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT,PATCH"
+Header always set Access-Control-Allow-Headers: "DNT,X-CustomHeader,Keep-Alive,Content-Type,Origin,Authentication,Authorization,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control"
+Header always set Access-Control-Allow-Credentials true
+Options +FollowSymlinks
+
+Options +SymLinksIfOwnerMatch
+
+RewriteEngine On
+RewriteRule ^(.*)$ /public/$1 [L]
